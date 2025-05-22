@@ -1,8 +1,7 @@
 import { BrowserRouter,Routes, Route} from 'react-router-dom'
 
 import Home from './pages/home/home'
-import Watch from './pages/product/watch/watch'
-import Jacket from './pages/product/jacket/jacket'
+
 import About from './pages/about/about'
 import Contact from './pages/contact/contact';
 import Favourites from './pages/favourites/favourites'
@@ -11,6 +10,8 @@ import Favourites from './pages/favourites/favourites'
 import './App.css'
 import Navbar from './pages/navbar/navbar'
 import './pages/navbar/navbar.css'
+import ProductPage from './pages/products/productpage'
+import './pages/products/productPage.css'
 
 function App() {
 
@@ -26,8 +27,8 @@ function App() {
 
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/watch" element={<Watch />} />
-          <Route path="/jacket" element={<Jacket />} />
+          <Route path="/products" element={<ProductPage />} />
+
           <Route path="/contact" element={<Contact />} />
           <Route path="/favourites" element={<Favourites />} />
         </Routes>
@@ -40,3 +41,4 @@ function App() {
 }
 
 export default App
+
