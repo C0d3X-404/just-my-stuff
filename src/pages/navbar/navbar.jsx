@@ -22,10 +22,10 @@ function Navbar() {
     return (
         <>
             <div className="navbar">
-                <Link to="/"><img src="/logo.svg" fill="#0b2027" width="40px" /></Link>
+                <Link to="/"><img src="/just-my-stuff/logo.svg" fill="#0b2027" width="40px" /></Link>
                 <div className="navRight">
-                    <img className="searchItem" src="/search.svg" alt="search" />
-                    <img className="likeItem" src="/heart.svg" alt="like" />
+                    <img className="searchItem" src="/just-my-stuff/search.svg" alt="search" />
+                    <img className="likeItem" src="/just-my-stuff/heart.svg" alt="like" />
     
                     
                     <div className="MenuItem" onClick={(e) => toggleMenu(e.currentTarget)}>
@@ -37,27 +37,44 @@ function Navbar() {
             </div>
             <div className="menu">
                 
-                <ul>
+                <ul className ="menuList">
                     <li className="menuLink">
-                        <Link to="/" className="menuText">Home</Link>
+                      <Link to="/" className="menuLinkInner" onClick={() => toggleMenu(document.querySelector(".MenuItem"))}>
+                        <img src="/just-my-stuff/home.svg" alt="home" className="menuIcon" />
+                        <span className="menuText">Home</span>
+                      </Link>
                     </li>
                     <li className="menuLink">
-                        <Link to="/About"  className="menuText">About</Link>
+                      <Link to="/about" className="menuLinkInner" onClick={() => toggleMenu(document.querySelector(".MenuItem"))}>
+                        <img src="/just-my-stuff/about.svg" alt="about" className="menuIcon" />
+                        <span className="menuText">About</span>
+                      </Link>
                     </li>
                     <li className="menuLink">
-                        <Link to="/contact" className="menuText">Contact</Link>
+                      <Link to="/contact" className="menuLinkInner" onClick={() => toggleMenu(document.querySelector(".MenuItem"))}>
+                        <img src="/just-my-stuff/contact.svg" alt="contact" className="menuIcon" />
+                        <span className="menuText">Contact</span>
+                      </Link>
                     </li>
                     <li className="menuLink">
-                        <Link to="/products" className="menuText">Products</Link>
+                      <Link to="/products" className="menuLinkInner" onClick={() => toggleMenu(document.querySelector(".MenuItem"))}>
+                        <img src="/just-my-stuff/products.svg" alt="products" className="menuIcon" />
+                        <span className="menuText">Products</span>
+                      </Link>
                     </li>
                     <li className="menuLink">
-                        <Link to="/cart" className="menuText">Cart</Link>
+                      <Link to="/cart" className="menuLinkInner" onClick={() => toggleMenu(document.querySelector(".MenuItem"))}>
+                        <img src="/just-my-stuff/cart.svg" alt="cart" className="menuIcon" />
+                        <span className="menuText">Cart</span>
+                      </Link>
                     </li>
                     <li className="menuLink">
-                        <Link to="/Account" className="menuText">Account</Link>
+                      <Link to="/account" className="menuLinkInner" onClick={() => toggleMenu(document.querySelector(".MenuItem"))}>
+                        <img src="/just-my-stuff/account.svg" alt="account" className="menuIcon" />
+                        <span className="menuText">Account</span>
+                      </Link>
                     </li>
-
-                </ul>
+                  </ul>
 
             </div>
 
