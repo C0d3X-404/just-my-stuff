@@ -12,6 +12,7 @@ import Navbar from './pages/navbar/navbar'
 import './pages/navbar/navbar.css'
 import ProductPage from './pages/products/productpage'
 import './pages/products/productPage.css'
+import Productview from './pages/products/ItemDetail'
 
 function App() {
 
@@ -28,6 +29,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/products" element={<ProductPage />} />
+          <Route path="/products/:id" element={<Productview/>} />
+
 
           <Route path="/contact" element={<Contact />} />
           <Route path="/favourites" element={<Favourites />} />
